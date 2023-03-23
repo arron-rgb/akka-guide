@@ -29,6 +29,6 @@ As discussed above, in Message Driven systems, each component send items to a fi
 There are multiple types of messages. A categorization of messages in a xref:cqrs.adoc[CQRS]/xref:event-sourcing.adoc[ES] application is the following:
 
 - *Command* — a message sent to produce a change on the state. The receiving component, if the command is valid, will update its state.
-- *Event* — a message emitted by a component when its state changed. The event includes the necessary data to evolve the older state to the newer state. The event is a message sent to the publishing infrastucture where consumers may later retrieve it.
+- *Event* — a message emitted by a component when its state changed. The event includes the necessary data to evolve the older state to the newer state. The event is a message sent to the publishing infrastructure where consumers may later retrieve it.
 - *Query* — a message sent to a component to obtain some information from it. A Query is a special type of message because it must include a sender address so the target component can reply.
 - *Reply* — the response to a query. A component handling a Query message will produce a Reply message and send it to the sender address specified in the query message.
